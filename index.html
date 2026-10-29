@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAGSCAN | 手荷物受付</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar"><div class="brand"><span class="brand-mark">TS</span><div><strong>TAGSCAN</strong><small>STAFF CONSOLE</small></div></div><span class="status"><i></i> COUNTER 03</span></header>
+    <section class="hero"><div><p class="eyebrow">BAGGAGE DROP / QR SCANNER</p><h1>手荷物を預ける</h1><p class="lead">タグのQRコードをカメラにかざしてください</p></div><div class="hero-line">OPEN<br><b>24</b><br>HOURS</div></section>
+    <section class="scanner-card"><div class="scanner-head"><div><p class="eyebrow">STEP 01</p><h2>QRコードをスキャン</h2></div><span class="live-pill"><i></i> CAMERA LIVE</span></div>
+      <div class="camera-window"><video id="video" autoplay playsinline muted></video><div id="idle" class="camera-idle"><span class="camera-icon">▣</span><b>カメラを起動中</b><small>QRコードを枠内に合わせてください</small></div><div class="scan-loading" id="loading"><div class="orbit"><span class="globe">◎</span><span class="plane">✈</span></div><b>読み取り中</b><small>QRコードを探しています</small></div><div class="scan-frame"></div></div>
+      <p id="message" class="camera-note">カメラの使用を許可すると自動で読み取りを開始します</p><button id="start" class="primary-button">カメラを起動</button><button id="demo" class="text-button">サンプルを読み込む</button>
+    </section>
+    <section class="result-card"><div class="section-title"><div><p class="eyebrow">STEP 02</p><h2>読み取り結果</h2></div><span id="type" class="type-chip">WAITING</span></div><div id="result" class="result-empty">まだ読み取り結果がありません</div></section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
